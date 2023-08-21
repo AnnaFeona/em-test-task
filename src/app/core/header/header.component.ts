@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   public login!: 'LogOut' | 'LogIn';
 
-  public userName!: Observable<string>;
+  public userName$!: Observable<string>;
 
   constructor(
     private auth: AuthService,
@@ -21,11 +21,11 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.userName$ = this.auth.userName$;
+
     this.auth.isLoggedIn$.subscribe((v) => {
       this.login = v ? 'LogOut' : 'LogIn';
-      console.log(this.auth.isLoggedIn$, this.auth.userName$);
     });
-    this.userName = this.auth.userName$;
   }
 
   public logInOut(): void {

@@ -17,11 +17,11 @@ import passwordValidator from '../../utils/password-validator';
 export class LoginComponent implements OnInit {
   public user: FormGroup;
 
-  hide = true;
-
   public loginFormControl!: FormControl<string>;
 
   public passwordFormControl!: FormControl<string>;
+
+  public isLoggedIn$ = this.auth.isLoggedIn$;
 
   constructor(
     public auth: AuthService,
@@ -41,8 +41,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.auth.logIn(this.loginFormControl.value);
-    console.log(this.loginFormControl.value);
-
     this.router.navigate(['']);
   }
 }

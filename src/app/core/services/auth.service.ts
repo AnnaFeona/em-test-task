@@ -18,8 +18,8 @@ export class AuthService {
   }
 
   public logIn(value: string): void {
-    this.isLoggedIn$.next(true);
     this.userName$.next(value);
+    this.isLoggedIn$.next(true);
     localStorage.setItem(this.userNameKey, value);
   }
 
@@ -36,7 +36,6 @@ export class AuthService {
       this.userName$.next(user);
     } else {
       this.isLoggedIn$.next(false);
-      this.userName$.complete();
     }
   }
 }

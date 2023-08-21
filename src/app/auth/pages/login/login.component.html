@@ -1,4 +1,4 @@
-<div class="login-message" *ngIf="">You are not logged in yet</div>
+<div class="login-message" *ngIf="(isLoggedIn$ | async) !== true">You are not logged in yet</div>
 <mat-card class="login-card">
   <mat-card-header>
     <mat-card-title>LogIn</mat-card-title>
