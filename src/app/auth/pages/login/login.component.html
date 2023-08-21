@@ -11,7 +11,7 @@
           <input type="email"
                 matInput
                 formControlName="login"
-                placeholder="Ex. John Doe">
+                placeholder="ex. user@mail.com">
           <mat-error *ngIf="loginFormControl.hasError('required')">Please enter a valid login</mat-error>
           <mat-error *ngIf="loginFormControl.hasError('email')">The login email is invalid</mat-error>
         </mat-form-field>

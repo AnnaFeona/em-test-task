@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { AuthService } from '../../../core/services/auth.service';
 import { Router } from '@angular/router';
+import passwordValidator from '../../utils/password-validator';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit {
   ) {
     this.user = fb.group({
       login: fb.control('', [Validators.required, Validators.email]),
-      password: fb.control('', [Validators.required]),
+      password: fb.control('', [Validators.required, passwordValidator()]),
     });
   }
 
