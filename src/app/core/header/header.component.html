@@ -1,1 +1,5 @@
-<p>header works!</p>
+<div class="user-info" *ngIf="isLoggedIn">
+  <mat-icon class="user-image" color="primary">account_circle</mat-icon>
+  <span class="user-name">User</span>
+</div>
+<button mat-raised-button color="primary" (click)="logInOut()">{{ login }}</button>

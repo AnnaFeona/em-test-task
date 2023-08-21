@@ -1,0 +1,14 @@
+@use '../../../styles/mixins.scss' as mx;
+
+:host {
+  @include mx.wrapper;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding-top: 1.25rem;
+  gap: 1rem;
+
+  .user-info {
+    @include mx.flex-center;
+    gap: 0.5rem;
+  }
+}
