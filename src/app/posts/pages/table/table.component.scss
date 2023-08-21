@@ -1,0 +1,6 @@
+@use '../../../../styles/mixins.scss' as mx;
+
+:host {
+  @include mx.wrapper;
+  margin-top: 2rem;
+}
