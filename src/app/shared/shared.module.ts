@@ -10,7 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
-import { CdkTableModule } from '@angular/cdk/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { MatSortModule } from '@angular/material/sort';
 
@@ -27,7 +27,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatDividerModule,
     MatTableModule,
     MatSortModule,
-    CdkTableModule,
+    MatPaginatorModule,
   ],
   exports: [
     HttpClientModule,
@@ -39,7 +39,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatDividerModule,
     MatTableModule,
     MatSortModule,
-    CdkTableModule,
+    MatPaginatorModule,
   ],
 })
 export class SharedModule {}

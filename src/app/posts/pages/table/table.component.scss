@@ -1,6 +1,43 @@
 @use '../../../../styles/mixins.scss' as mx;
+@use '@angular/material' as mat;
+
 
 :host {
-  @include mx.wrapper;
+  @include mx.wrapper(100%);
+  flex-direction: column;
   margin-top: 2rem;
+
+  .read-more-message {
+    color: mat.get-color-from-palette(mat.$amber-palette, 200);
+    font-size: 0.75rem;
+  }
+
+  .mat-mdc-row .mat-mdc-cell {
+    padding: 0.5rem;
+  }
+
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-color: mat.get-color-from-palette(mat.$deep-purple-palette, 600);
+    background-color: mat.get-color-from-palette(mat.$deep-purple-palette, 50);
+    cursor: pointer;
+  }
+
+  .mat-mdc-row:active .mat-mdc-cell {
+    background-color: mat.get-color-from-palette(mat.$amber-palette, 50);
+    cursor: pointer;
+  }
 }
+
+@media (min-width: 475px) {
+  :host {
+    @include mx.wrapper(85%);
+    margin-top: 2rem;
+
+    .mat-mdc-row .mat-mdc-cell {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+

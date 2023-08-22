@@ -1,7 +1,7 @@
 @use '../../../../styles/mixins.scss' as mx;
 
 :host {
-  @include mx.wrapper;
+  @include mx.wrapper(85%);
   justify-content: flex-end;
   flex-wrap: wrap;
   padding-top: 1.25rem;

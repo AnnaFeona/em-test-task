@@ -1,7 +1,7 @@
 @use '../../../../styles/mixins.scss' as mx;
 
 :host {
-  @include mx.wrapper;
+  @include mx.wrapper(85%);
   @include mx.flex-center;
   flex-direction: column;
   gap: 2rem;
