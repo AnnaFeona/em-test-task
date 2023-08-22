@@ -48,7 +48,6 @@ export class DetailsComponent implements OnInit, OnDestroy {
       error: (err) => {
         console.log(err.cause);
       },
-      complete: () => console.log('complete'),
     });
   }
 

@@ -1,5 +1,7 @@
 <div class="user-info" *ngIf="isLoggedIn$ | async">
   <mat-icon class="user-image" color="primary">account_circle</mat-icon>
-  <span class="user-name"> {{ userName$ | async }} </span>
+  <span class="user-name">{{ userName$ | async }}</span>
 </div>
-<button mat-raised-button color="primary" (click)="logInOut()">{{ login }} </button>
+<button mat-raised-button color="primary" (click)="logInOut()">
+  {{ login }}
+</button>
