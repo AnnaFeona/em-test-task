@@ -36,7 +36,7 @@ export class ApiService {
 
   private handleError(err: HttpErrorResponse) {
     // throw new Error(err.message, { cause: err.status });
-    console.log('Error:', err.status);
+    console.log('Error:', err.message);
     return EMPTY;
   }
 }

@@ -13,6 +13,8 @@ export class AuthService {
 
   private readonly userNameKey = `${STORAGE_KEY_PREFIX}-userName`;
 
+  private readonly paginationStateKey = `${STORAGE_KEY_PREFIX}-state`;
+
   constructor(private router: Router) {
     this.initUserName();
   }
@@ -26,6 +28,7 @@ export class AuthService {
   public logOut(): void {
     this.isLoggedIn$.next(false);
     localStorage.removeItem(this.userNameKey);
+    localStorage.removeItem(this.paginationStateKey);
   }
 
   private initUserName(): void {

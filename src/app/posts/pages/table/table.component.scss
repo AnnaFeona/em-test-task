@@ -6,6 +6,7 @@
   @include mx.wrapper(100%);
   flex-direction: column;
   margin-top: 2rem;
+  padding-bottom: 2rem;
 
   .read-more-message {
     color: mat.get-color-from-palette(mat.$amber-palette, 200);
